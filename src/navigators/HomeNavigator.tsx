@@ -33,6 +33,7 @@ function MyStack({route,navigation,cartItems,clearCart}:{cartItems:{product:Prod
         const price=total+=cartItem.product.fiyat
         setTotalPrice(price)
       });
+      cartItems.length ? null : setTotalPrice(0)
   }
 
   useEffect(()=>{
